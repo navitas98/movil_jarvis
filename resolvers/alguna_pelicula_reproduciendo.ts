@@ -1,7 +1,7 @@
 // @deno-types="npm:@types/express@4"
 import { Request, Response } from "express";
 import { PeliculasModel } from "../db/Peliculas.ts";
-export const mostrarPeliculas=async(
+export const alguna_pelicula_reproduciendo=async(
     req: Request,
     res: Response<boolean | { error: unknown }>
 )=>{

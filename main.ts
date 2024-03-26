@@ -6,7 +6,7 @@ import { reproducir_pelicula } from "./resolvers/reproducir_pelicula.ts";
 import { mostrarPeliculas } from "./resolvers/mostrarPeliculas.ts";
 import { getPelicula } from "./resolvers/mostrarPelila.ts";
 import { reproduciendo } from "./resolvers/reproduciendoPelicula.ts";
-
+import {alguna_pelicula_reproduciendo}"./resolvers/alguna_pelicula_reproduciendo.ts"
 
 const MONGO_URL = Deno.env.get("MONGO_URL");
 
@@ -22,6 +22,7 @@ app
   .get("/",(req:Request,res:Response)=>{res.send("funcionando")})
   .get("/peliculas",mostrarPeliculas)
   .get("/pelicula_reproduciendo",reproduciendo)
+  .get("/alguna_pelicula_reproduciendo",alguna_pelicula_reproduciendo)
   .get("/pelicula/:id", getPelicula)
   .post("/pelicula",nuevaPelicula)
   .put("/reproducir_pelicula/:id",reproducir_pelicula)
