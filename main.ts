@@ -20,7 +20,7 @@ app.use(express.json());
 app
   .get("/",(req:Request,res:Response)=>{res.send("funcionando")})
   .get("/peliculas",mostrarPeliculas)
-  .get("/pelicula/:nombre", getPelicula)
+  .get("/pelicula/:id", getPelicula)
   .post("/pelicula",nuevaPelicula)
   .put("/reproducir_pelicula/:id",reproducir_pelicula)
   

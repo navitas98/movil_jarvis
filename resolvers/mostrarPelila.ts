@@ -3,7 +3,7 @@ import { PeliculasModel } from "../db/Peliculas.ts";
 
 export const getPelicula=async(req:Request, res:Response)=>{
     try {
-       const {nombre}=req.params;
+        const nombre=req.params.id;
        const pelicula=await PeliculasModel.findOne({nombre}).exec();
        if(!pelicula){
         res.status(404).send("Pelicula no encontrada");
