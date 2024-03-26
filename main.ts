@@ -6,7 +6,7 @@ import { reproducir_pelicula } from "./resolvers/reproducir_pelicula.ts";
 import { mostrarPeliculas } from "./resolvers/mostrarPeliculas.ts";
 import { getPelicula } from "./resolvers/mostrarPelila.ts";
 import { reproduciendo } from "./resolvers/reproduciendoPelicula.ts";
-import {alguna_pelicula_reproduciendo}"./resolvers/alguna_pelicula_reproduciendo.ts"
+import {alguna_pelicula_reproduciendo} from "./resolvers/alguna_pelicula_reproduciendo.ts"
 
 const MONGO_URL = Deno.env.get("MONGO_URL");
 
